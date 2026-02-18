@@ -1,0 +1,81 @@
+/*-----------
+    Fonts
+-----------*/
+@font-face
+{
+    font-family: 'SFRounded';
+    font-weight: 300;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/SFRounded-Light.woff2') format('woff2'),
+    url('../fonts/SFRounded-Light.woff') format('woff'),
+    url('../fonts/SFRounded-Light.ttf') format('truetype');
+}
+
+
+@font-face
+{
+    font-family: 'SFRounded';
+    font-weight: normal;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/SFRounded-Regular.woff2') format('woff2'),
+    url('../fonts/SFRounded-Regular.woff') format('woff'),
+    url('../fonts/SFRounded-Regular.ttf') format('truetype');
+}
+
+
+@font-face
+{
+    font-family: 'SFRounded';
+    font-weight: 500;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/SFRounded-Medium.woff2') format('woff2'),
+    url('../fonts/SFRounded-Medium.woff') format('woff'),
+    url('../fonts/SFRounded-Medium.ttf') format('truetype');
+}
+
+
+
+@font-face
+{
+    font-family: 'Vetrino';
+    font-weight: normal;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/vetrino.woff2') format('woff2'),
+    url('../fonts/vetrino.woff') format('woff'),
+    url('../fonts/vetrino.ttf') format('truetype');
+}
+
+
+
+@font-face
+{
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/ubuntu-300.woff2') format('woff2'),
+    url('../fonts/ubuntu-regular.woff') format('woff'),
+    url('../fonts/ubuntu-regular.ttf') format('truetype');
+}
+
+
+@font-face
+{
+    font-family: 'Ubuntu';
+    font-weight: normal;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/ubuntu-regular.woff2') format('woff2'),
+    url('../fonts/ubuntu-regular.woff') format('woff'),
+    url('../fonts/ubuntu-regular.ttf') format('truetype');
+}

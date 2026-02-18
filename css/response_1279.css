@@ -1,0 +1,819 @@
+@media print,
+(max-width: 1279px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --custom_scroll_width: 5px;
+        --custom_scroll_height: 5px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        gap: 12px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header
+    {
+        position: fixed;
+        top: 0;
+        left: 100%;
+
+        width: 100%;
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+        padding-block: 80px var(--inner_gap);
+        padding-inline: var(--inner_gap);
+
+        z-index: 101;
+        transition: transform .3s linear;
+    }
+
+
+    header.show
+    {
+        transform: translateX(-100%);
+    }
+
+
+    header .cont
+    {
+        display: flex;
+        overflow: auto;
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        padding: var(--inner_gap);
+
+        border-radius: var(--border_radius_xs);
+        background: var(--bg_white);
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .10);
+
+        overscroll-behavior-y: contain;
+    }
+
+
+    header .logo
+    {
+        display: none;
+    }
+
+
+    header .menu
+    {
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        width: 100%;
+        margin: 0 0 var(--block_padding_l);
+        padding-block: 0 var(--inner_gap);
+        padding-inline: 0;
+
+        border: none;
+        border-bottom: 1px solid #eae2d9;
+
+        gap: var(--inner_gap);
+    }
+
+
+    header .menu .item > a
+    {
+        height: auto;
+        padding: 0;
+    }
+
+
+    header .address
+    {
+        align-self: center;
+
+        margin-right: auto;
+
+        font-size: var(--font_size);
+    }
+
+
+    header .phone
+    {
+        align-self: center;
+
+        margin-left: 0;
+
+        font-size: var(--font_size);
+    }
+
+
+    header .messengers a
+    {
+        background: #f9f9f9;
+    }
+
+
+
+    /*-----------------
+        Mob. header
+    -----------------*/
+    .mob_header
+    {
+        display: block;
+    }
+
+
+
+    /*----------------
+        Page links
+    ----------------*/
+    .page_links .swiper-slide
+    {
+        width: 230px;
+    }
+
+
+    .page_links .swiper-button-prev:after,
+    .page_links .swiper-button-next:after
+    {
+        width: 20px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
+    {
+        gap: var(--inner_gap_s);
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section .cont
+    {
+        min-height: 600px;
+    }
+
+
+    .first_section .desc
+    {
+        width: 400px;
+    }
+
+
+    .first_section .links
+    {
+        padding-bottom: 12px;
+
+        gap: 15px;
+    }
+
+
+    .first_section .links .link
+    {
+        height: 32px;
+    }
+
+
+    .first_section .links .link:after
+    {
+        bottom: -12px;
+    }
+
+
+
+    /*----------------
+        Directions
+    ----------------*/
+    .directions .section
+    {
+        width: 140px;
+        min-width: 140px;
+        height: 500px;
+    }
+
+
+    .directions .section .name
+    {
+        width: 140px;
+    }
+
+
+    .directions .section .arrow
+    {
+        width: 20px;
+    }
+
+
+    .directions .section .info
+    {
+        padding: var(--inner_gap_l);
+    }
+
+
+    .directions .section .links
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap_l);
+
+        font-size: var(--font_size);
+
+        gap: var(--inner_gap_l);
+    }
+
+
+    .directions .section .data
+    {
+        width: calc(100% - 140px);
+    }
+
+
+
+    /*---------
+        Why
+    ---------*/
+    .why .item .desc
+    {
+        width: 440px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .map
+    {
+        width: 360px;
+        height: 512px;
+        margin-block: var(--block_padding_l);
+    }
+
+
+
+    .contacts_info .data
+    {
+        width: calc(100% - 360px - var(--block_padding_l));
+    }
+
+
+    .contacts_info .item .val.phone,
+    .contacts_info .item .val.email
+    {
+        gap: var(--inner_gap);
+    }
+
+
+    .contacts_info .item .messengers a
+    {
+        width: 48px;
+    }
+
+
+
+    .contacts_info .images .image
+    {
+        width: 400px;
+        height: 320px;
+    }
+
+
+    .contacts_info .images .image.l_w
+    {
+        width: calc(100% - 400px - var(--inner_gap_s));
+    }
+
+
+
+    /*---------------
+        Portfolio
+    ---------------*/
+    .portfolio .grid_row .item,
+    .portfolio .grid_row .item.l_h
+    {
+        height: 440px;
+    }
+
+
+    .portfolio .grid_row .item .link a
+    {
+        height: 60px;
+    }
+
+
+
+    /*--------------------
+        Contacts block
+    --------------------*/
+    .contacts_block .info
+    {
+        align-content: center;
+        align-items: center;
+
+        width: 100%;
+        padding-block: 60px;
+
+        text-align: center;
+    }
+
+
+    .contacts_block .info .block_head .title
+    {
+        width: 100%;
+    }
+
+
+    .contacts_block .info .order_btn
+    {
+        width: 310px;
+        max-width: 100%;
+        height: 70px;
+
+        border: 1px solid #dadada;
+        border-radius: var(--border_radius);
+    }
+
+
+
+    .contacts_block .data .contacts
+    {
+        width: 160px;
+    }
+
+
+
+    .contacts_block .cont.row .data
+    {
+        width: 100%;
+        padding-block: 60px 0;
+    }
+
+
+
+    /*--------------------
+        Portfolio info
+    --------------------*/
+    .portfolio_info .data
+    {
+        height: 500px;
+    }
+
+
+
+    /*-----------------------
+        Portfolio gallery
+    -----------------------*/
+    .portfolio_gallery .swiper-slide
+    {
+        width: 260px;
+    }
+
+
+    .portfolio_gallery .swiper-button-prev:after,
+    .portfolio_gallery .swiper-button-next:after
+    {
+        width: 20px;
+    }
+
+
+
+    /*-----------------
+        Action form
+    -----------------*/
+    .action_form .data
+    {
+        padding-block: 60px;
+    }
+
+
+    .action_form .block_head,
+    .action_form .block_head.l_w,
+    .action_form .block_head.s_w
+    {
+        align-content: center;
+        align-items: center;
+
+        width: 100%;
+        margin-bottom: var(--block_head_offset);
+
+        text-align: center;
+    }
+
+
+    .action_form .form
+    {
+        margin-inline: auto;
+    }
+
+
+    .action_form .form .checkbox
+    {
+        margin-inline: auto;
+    }
+
+
+
+    /*-----------------------
+        Project economics
+    -----------------------*/
+    .project_economics .col
+    {
+        width: 280px;
+        padding-block: 60px;
+    }
+
+
+    .project_economics .photo
+    {
+        width: 100%;
+        height: 336px;
+    }
+
+
+    .project_economics .data
+    {
+        width: calc(100% - 280px - 60px);
+        padding-block: 60px;
+        padding-left: 60px;
+
+        gap: var(--inner_gap_l);
+    }
+
+
+    .project_economics .info .label
+    {
+        min-height: 48px;
+        padding-block: var(--inner_gap_s);
+        padding-inline: var(--inner_gap);
+
+        gap: var(--inner_gap_s);
+    }
+
+
+    .project_economics .info .val
+    {
+        min-height: 48px;
+        padding-block: var(--inner_gap_s);
+        padding-inline: var(--inner_gap);
+    }
+
+
+
+    /*----------------
+        About head
+    ----------------*/
+    .about_head .data
+    {
+        height: 500px;
+        padding-block: var(--block_padding_l);
+    }
+
+
+
+    /*----------
+        Team
+    ----------*/
+    .team .block_head
+    {
+        width: 340px;
+        padding: var(--block_padding_l);
+    }
+
+
+    .team .image
+    {
+        width: calc(100% - 340px - var(--inner_gap));
+        min-height: 472px;
+    }
+
+
+
+    /*--------------------
+        Infrastructure
+    --------------------*/
+    .infrastructure .image
+    {
+        height: 268px;
+    }
+
+
+    .infrastructure .block_head
+    {
+        padding: var(--block_padding_l);
+    }
+
+
+    .infrastructure .block_head .title
+    {
+        width: 360px;
+    }
+
+
+
+    /*------------------
+        Service head
+    ------------------*/
+    .service_head .cont
+    {
+        height: 600px;
+    }
+
+
+    .service_head .links
+    {
+        padding-bottom: 12px;
+
+        gap: 15px;
+    }
+
+
+    .service_head .links .link
+    {
+        height: 32px;
+    }
+
+
+    .service_head .links .link:after
+    {
+        bottom: -12px;
+    }
+
+
+
+    /*----------------------
+        Service benefits
+    ----------------------*/
+    .service_benefits .item .text_block
+    {
+        width: calc(100% - 480px - var(--inner_gap_s));
+    }
+
+
+    .service_benefits .item .info
+    {
+        width: 480px;
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .grid_row
+    {
+        --items_per_line: 3;
+    }
+
+
+    .steps .step
+    {
+        min-height: 340px;
+    }
+
+
+
+    /*-------------------
+        Service after
+    -------------------*/
+    .service_after .head .percents
+    {
+        font-size: 120px;
+    }
+
+
+    .service_after .head .link
+    {
+        width: 260px;
+    }
+
+
+    .service_after .head .link a
+    {
+        height: 80px;
+    }
+
+
+
+    .service_after .data
+    {
+        height: 500px;
+        padding: var(--block_padding_l);
+    }
+
+
+
+    /*------------------------
+        Service advantages
+    ------------------------*/
+    .service_advantages .block_head
+    {
+        width: 332px;
+    }
+
+
+    .service_advantages .accordion
+    {
+        width: 560px;
+    }
+
+
+
+    /*------------
+        Steps2
+    ------------*/
+    .steps2 .step .name
+    {
+        width: 208px;
+    }
+
+
+    .steps2 .step .desc
+    {
+        width: calc(100% - 620px);
+        margin-left: var(--block_padding_l);
+    }
+
+
+
+    /*--------------------------
+        Show real apartments
+    --------------------------*/
+    .show_real_apartments .data
+    {
+        width: calc(100% - 600px);
+    }
+
+
+    .show_real_apartments .image
+    {
+        width: 280px;
+    }
+
+
+    .show_real_apartments .image.l_w
+    {
+        display: none;
+    }
+
+
+
+    /*---------
+        How
+    ---------*/
+    .how .item .desc
+    {
+        width: 440px;
+    }
+
+
+
+    /*------------------
+        Work formats
+    -----------------*/
+    .work_formats .item
+    {
+        width: 320px;
+
+        gap: var(--inner_gap_s);
+    }
+
+
+    .work_formats .item .desc
+    {
+        font-size: var(--font_size);
+        line-height: calc(100% + 8px);
+    }
+
+
+    .work_formats .image
+    {
+        width: calc(100% - 660px);
+        height: 500px;
+    }
+
+
+
+    /*---------------
+        Get price
+    ---------------*/
+    .get_price .info
+    {
+        width: 320px;
+        min-height: 550px;
+        padding: var(--block_padding_l);
+    }
+
+
+    .get_price .data
+    {
+        width: calc(100% - 340px);
+        min-height: 550px;
+        padding: var(--block_padding_l);
+    }
+
+
+
+    /*----------------
+        What we do
+    ----------------*/
+    .what_we_do .grid
+    {
+        height: 550px;
+
+        gap: var(--inner_gap);
+        grid-template-columns: 320px 1fr;
+    }
+
+
+    .what_we_do .item:nth-child(3)
+    {
+        min-height: 180px;
+    }
+
+
+
+    /*----------------------
+        Unique expertise
+    ----------------------*/
+    .unique_expertise .grid_row.main
+    {
+        --gap_x: var(--inner_gap);
+        --gap_y: var(--inner_gap);
+    }
+
+
+    .unique_expertise .we_create
+    {
+        gap: var(--inner_gap);
+    }
+
+
+
+    /*------------------
+        Discuss form
+    ------------------*/
+    .discuss_form .info
+    {
+        width: 360px;
+        min-height: 550px;
+        padding: var(--block_padding_l);
+    }
+
+
+    .discuss_form .image
+    {
+        width: calc(100% - 380px);
+    }
+
+
+
+    /*--------------
+        Benefits
+    --------------*/
+    .benefits .data
+    {
+        width: 448px;
+        padding: var(--block_padding_l);
+    }
+
+
+    .benefits .image
+    {
+        width: calc(100% - 468px);
+    }
+
+
+
+    /*--------------------------
+        Get current projects
+    --------------------------*/
+    .get_current_projects .grid_row
+    {
+        --gap_x: var(--inner_gap);
+        --gap_y: var(--inner_gap);
+    }
+
+
+    .get_current_projects .item
+    {
+        min-height: 440px;
+    }
+}

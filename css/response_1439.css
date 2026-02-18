@@ -1,0 +1,740 @@
+@media print,
+(max-width: 1439px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size_xxl: 18px;
+        --font_size_xl: 16px;
+        --font_size_title_l: 52px;
+        --font_size_title: 41px;
+        --font_size_title_m: 36px;
+        --font_size_title_s: 26px;
+        --font_size_title_xs: 20px;
+        --block_head_offset_xl: 40px;
+        --block_head_offset_l: 32px;
+        --block_head_offset: 24px;
+        --block_padding_l: 40px;
+        --block_padding: 32px;
+        --block_padding_s: 24px;
+        --outside_gap_xl: 100px;
+        --outside_gap_l: 100px;
+        --outside_gap: 80px;
+        --outside_gap_s: 80px;
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination
+    {
+        margin-top: var(--block_padding_l);
+    }
+
+
+
+    /*----------
+        Tabs
+    ----------*/
+    .tabs
+    {
+        margin-bottom: var(--block_padding_l);
+    }
+
+
+
+    /*--------------
+        All link
+    --------------*/
+    .all_link
+    {
+        margin-top: var(--block_padding_l);
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header .logo
+    {
+        gap: var(--inner_gap_s);
+    }
+
+
+    header .menu
+    {
+        margin-left: var(--inner_gap);
+        padding-right: var(--inner_gap);
+    }
+
+
+    header .menu .item > a
+    {
+        height: 64px;
+    }
+
+
+    header .phone
+    {
+        margin-left: var(--inner_gap);
+    }
+
+
+    header .messengers
+    {
+        margin-left: var(--inner_gap);
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head
+    {
+        margin-bottom: var(--block_padding_l);
+        padding-top: var(--inner_gap);
+    }
+
+
+    .page_head .order_btn
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*----------------
+        Page links
+    ----------------*/
+    .page_links .swiper-slide
+    {
+        width: 292px;
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form
+    {
+        --form_input_height: 70px;
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section .cont
+    {
+        min-height: 650px;
+        padding-block: 60px;
+    }
+
+
+
+    /*----------------
+        Directions
+    ----------------*/
+    .directions .section
+    {
+        width: 148px;
+        min-width: 148px;
+        height: 520px;
+    }
+
+
+    .directions .section .name
+    {
+        width: 148px;
+        padding-block: var(--inner_gap);
+    }
+
+
+    .directions .section .links
+    {
+        min-height: 80px;
+
+        gap: 60px;
+    }
+
+
+    .directions .section .data
+    {
+        width: calc(100% - 148px);
+    }
+
+
+
+    /*---------
+        Why
+    ---------*/
+    .why .item
+    {
+        min-height: 100px;
+        padding-inline: var(--block_padding_l);
+    }
+
+
+    .why .item .name
+    {
+        width: 320px;
+    }
+
+
+    .why .item .desc
+    {
+        width: 480px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info:not(.block)
+    {
+        margin-bottom: 60px;
+    }
+
+
+
+    .contacts_info .map
+    {
+        width: 420px;
+        height: 500px;
+        margin-block: var(--block_padding_l) 60px;
+    }
+
+
+
+    .contacts_info .data
+    {
+        width: calc(100% - 480px);
+        padding-block: var(--block_padding_l) var(--outside_gap_s);
+        padding-left: var(--block_padding_l);
+    }
+
+
+    .contacts_info .item .label
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .contacts_info .item .messengers a
+    {
+        width: 52px;
+    }
+
+
+    .contacts_info .info
+    {
+        padding-top: var(--block_padding_l);
+    }
+
+
+    .contacts_info .info:before
+    {
+        left: calc(var(--block_padding_l) * -1);
+    }
+
+
+
+    .contacts_info .images .image
+    {
+        width: 460px;
+        height: 360px;
+    }
+
+
+    .contacts_info .images .image.l_w
+    {
+        width: calc(100% - 460px - var(--inner_gap_s));
+    }
+
+
+
+    /*---------------
+        Portfolio
+    ---------------*/
+    .portfolio .swiper .item
+    {
+        height: 600px;
+        padding-block: 100px var(--block_padding_l);
+        padding-inline: var(--block_padding);
+    }
+
+
+
+    .portfolio .grid_row .item,
+    .portfolio .grid_row .item.l_h
+    {
+        height: 488px;
+        padding-block: var(--inner_gap_l);
+        padding-inline: var(--inner_gap_l);
+    }
+
+
+    .portfolio .grid_row .item .features
+    {
+        margin-top: 0;
+    }
+
+
+    .portfolio .grid_row .item .link
+    {
+        margin-top: var(--inner_gap_xs);
+    }
+
+
+    .portfolio .grid_row .item .link a
+    {
+        height: 64px;
+    }
+
+
+
+    /*--------------------
+        Contacts block
+    --------------------*/
+    .contacts_block .info
+    {
+        width: 400px;
+        padding-block: 100px 60px;
+        padding-inline: var(--block_padding);
+    }
+
+
+
+    .contacts_block .data
+    {
+        padding-block: var(--outside_gap);
+
+        --cont_padding: var(--inner_gap_l);
+    }
+
+
+    .contacts_block .data .row .title
+    {
+        font-size: var(--font_size_xl);
+    }
+
+
+
+    .contacts_block .cont.row .data
+    {
+        width: calc(100% - 400px - var(--inner_gap));
+        padding-block: 100px 0;
+    }
+
+
+    .contacts_block .cont.row .data .sep
+    {
+        height: 292px;
+    }
+
+
+
+    /*--------------------
+        Portfolio info
+    --------------------*/
+    .portfolio_info .data
+    {
+        height: 550px;
+    }
+
+
+
+    /*-----------------
+        Action form
+    -----------------*/
+    .action_form .data
+    {
+        --cont_padding: var(--inner_gap_l);
+    }
+
+
+
+    /*----------------
+        About head
+    ----------------*/
+    .about_head
+    {
+        padding-inline: var(--cont_padding);
+    }
+
+
+    .about_head .data
+    {
+        height: 550px;
+
+        --cont_padding: var(--inner_gap_l);
+    }
+
+
+
+    /*----------
+        Team
+    ----------*/
+    .team .block_head
+    {
+        width: 380px;
+
+        gap: var(--inner_gap);
+    }
+
+
+    .team .image
+    {
+        width: calc(100% - 380px - var(--inner_gap));
+        min-height: 600px;
+    }
+
+
+
+    /*--------------------
+        Infrastructure
+    --------------------*/
+    .infrastructure .image
+    {
+        height: 340px;
+    }
+
+
+    .infrastructure .block_head .title
+    {
+        width: 400px;
+    }
+
+
+
+    /*------------------
+        Service head
+    ------------------*/
+    .service_head .cont
+    {
+        height: 650px;
+        padding-inline: var(--inner_gap_l);
+    }
+
+
+    .service_head .title
+    {
+        width: 892px;
+    }
+
+
+
+    /*----------------------
+        Service benefits
+    ----------------------*/
+    .service_benefits .item .text_block
+    {
+        width: calc(100% - 600px - var(--inner_gap_s));
+        padding-block: var(--inner_gap_l);
+        padding-inline: var(--inner_gap_l);
+    }
+
+
+    .service_benefits .item .info
+    {
+        width: 600px;
+        padding-inline: var(--block_padding);
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .data
+    {
+        padding-block: 60px;
+    }
+
+
+    .steps .grid_row
+    {
+        --gap_x: var(--inner_gap);
+        --gap_y: var(--inner_gap);
+    }
+
+
+    .steps .step
+    {
+        min-height: 348px;
+        padding: var(--inner_gap_l);
+    }
+
+
+
+    /*-------------------
+        Service after
+    -------------------*/
+    .service_after .head
+    {
+        margin-bottom: 60px;
+    }
+
+
+    .service_after .head .percents
+    {
+        font-size: 140px;
+    }
+
+
+    .service_after .head .info
+    {
+        width: 364px;
+    }
+
+
+    .service_after .head .link
+    {
+        width: 280px;
+    }
+
+
+    .service_after .head .link a
+    {
+        height: 100px;
+    }
+
+
+
+    .service_after .data
+    {
+        height: 550px;
+        padding: 60px;
+    }
+
+
+
+    /*------------------------
+        Service advantages
+    ------------------------*/
+    .service_advantages
+    {
+        padding-top: 60px;
+    }
+
+
+    .service_advantages .accordion
+    {
+        width: 620px;
+    }
+
+
+
+    /*------------
+        Steps2
+    ------------*/
+    .steps2 .data
+    {
+        padding-block: 60px;
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .steps2 .step + .step
+    {
+        margin-top: var(--block_padding);
+        padding-top: var(--block_padding);
+    }
+
+
+    .steps2 .step .number
+    {
+        margin-right: var(--inner_gap);
+    }
+
+
+    .steps2 .step .desc
+    {
+        width: 440px;
+    }
+
+
+
+    /*--------------------------
+        Show real apartments
+    --------------------------*/
+    .show_real_apartments .data
+    {
+        width: calc(100% - 908px);
+    }
+
+
+    .show_real_apartments .image
+    {
+        width: 268px;
+    }
+
+    .show_real_apartments .image.l_w
+    {
+        width: 312px;
+    }
+
+
+
+    /*---------
+        How
+    ---------*/
+    .how .item
+    {
+        min-height: 100px;
+        padding-inline: var(--block_padding_l);
+    }
+
+
+    .how .item .number
+    {
+        padding-block: var(--inner_gap);
+    }
+
+
+    .how .item .name
+    {
+        width: 320px;
+        padding-block: var(--inner_gap);
+    }
+
+
+    .how .item .desc
+    {
+        width: 480px;
+        padding-block: var(--inner_gap);
+    }
+
+
+
+    /*------------------
+        Work formats
+    -----------------*/
+    .work_formats .item
+    {
+        width: 400px;
+    }
+
+
+    .work_formats .image
+    {
+        width: calc(100% - 820px);
+        height: 600px;
+    }
+
+
+
+    /*---------------
+        Get price
+    ---------------*/
+    .get_price .info
+    {
+        width: 380px;
+        min-height: 600px;
+    }
+
+
+    .get_price .data
+    {
+        width: calc(100% - 400px);
+        min-height: 600px;
+        padding: 60px;
+
+        gap: var(--inner_gap_l);
+    }
+
+
+
+    /*----------------
+        What we do
+    ----------------*/
+    .what_we_do .grid
+    {
+        height: 600px;
+
+        grid-template-columns: 360px 1fr;
+    }
+
+
+    .what_we_do .item:nth-child(3)
+    {
+        min-height: 200px;
+    }
+
+
+
+    /*------------------
+        Discuss form
+    ------------------*/
+    .discuss_form .info
+    {
+        width: 420px;
+        min-height: 600px;
+    }
+
+
+    .discuss_form .image
+    {
+        width: calc(100% - 440px);
+    }
+
+
+
+    /*--------------
+        Benefits
+    --------------*/
+    .benefits .data
+    {
+        width: 540px;
+    }
+
+
+    .benefits .image
+    {
+        width: calc(100% - 560px);
+    }
+
+
+
+    /*--------------------------
+        Get current projects
+    --------------------------*/
+    .get_current_projects .item
+    {
+        min-height: 500px;
+        padding: var(--block_padding);
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer
+    {
+        padding-bottom: 0;
+    }
+
+
+    footer .copyright
+    {
+        margin-left: var(--inner_gap);
+
+        gap: var(--inner_gap_xs);
+    }
+
+
+    footer .phone
+    {
+        margin-left: var(--inner_gap);
+    }
+}
