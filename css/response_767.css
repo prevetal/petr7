@@ -15,6 +15,16 @@
 
 
 
+    /*----------------
+        Swiper tip
+    ----------------*/
+    .swiper_tip
+    {
+        display: flex;
+    }
+
+
+
     /*------------
         Header
     ------------*/
@@ -26,9 +36,27 @@
 
 
 
+    /*-----------------
+        Mob. header
+    -----------------*/
+    .mob_header
+    {
+        --cont_padding: var(--cont_padding_half);
+    }
+
+
+
     /*----------------
         Pagination
     ----------------*/
+    .pagination
+    {
+        width: 340px;
+        max-width: 100%;
+        margin-inline: auto;
+    }
+
+
     .pagination a.hide
     {
         display: none;
@@ -79,7 +107,7 @@
     ------------------*/
     .form .checkbox
     {
-        font-size: var(--font_size);
+        font-size: var(--font_size_s);
         line-height: calc(100% + 4px);
     }
 
@@ -132,9 +160,17 @@
     }
 
 
+    .directions .row
+    {
+        border-radius: var(--border_radius);
+    }
+
+
     .directions .section .name
     {
         padding-inline: var(--inner_gap);
+
+        font-size: 20px;
     }
 
 
@@ -177,9 +213,29 @@
     }
 
 
+    .why .item
+    {
+        border-radius: 24px;
+    }
+
+
+    .why .item .number
+    {
+        width: 60px;
+        padding-inline: var(--inner_gap_l) 10px;
+    }
+
+
     .why .item .name
     {
-        width: calc(100% - 80px);
+        width: calc(100% - 60px);
+        padding-block: var(--inner_gap_l);
+    }
+
+
+    .why .item .desc
+    {
+        padding-block: var(--inner_gap_l);
     }
 
 
@@ -196,7 +252,7 @@
 
     .contacts_info .item .messengers a
     {
-        width: 170px;
+        width: 165px;
         height: 60px;
 
         aspect-ratio: auto;
@@ -225,6 +281,43 @@
     .portfolio .cont
     {
         padding-inline: var(--cont_padding_half);
+    }
+
+
+    .portfolio .block_head
+    {
+        align-content: flex-start;
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+
+    .portfolio .block_head .title .text_gradient ~ span
+    {
+        display: block;
+
+        font-size: 23px;
+        line-height: normal;
+    }
+
+
+    .portfolio .block_head .title .mob
+    {
+        display: block;
+    }
+
+
+    .portfolio .block_head .title .mob + span
+    {
+        display: none;
+    }
+
+
+    .portfolio .block_head .swiper_tip
+    {
+        right: 15px;
+        bottom: 4px;
     }
 
 
@@ -337,6 +430,13 @@
     }
 
 
+    .contacts_block .data .feedback .form .checkbox
+    {
+        width: fit-content;
+        margin-inline: auto;
+    }
+
+
 
     /*--------------------
         Portfolio info
@@ -416,9 +516,42 @@
     }
 
 
+    .service_head .data:before{
+        display: none;
+    }
+
+
+    .service_head .data:after
+    {
+        bottom: 83px;
+        left: 8px;
+
+        width: 362px;
+        height: 454px;
+
+        opacity: .8;
+    }
+
+
     .service_head .title
     {
+        width: calc(100% + var(--cont_padding));
+        max-width: calc(100% + var(--cont_padding));
+        margin-inline: calc(var(--cont_padding_half) * -1);
+
         line-height: calc(100% + 4px);
+    }
+
+
+    .service_head .title.small
+    {
+        font-size: 34px;
+    }
+
+
+    .service_head .title br
+    {
+        display: none;
     }
 
 
@@ -464,6 +597,12 @@
     .service_head .links .link:has(span:nth-child(2)) span + span
     {
         display: block;
+    }
+
+
+    .service_head .image:after
+    {
+        background: rgba(0, 0, 0, .39);
     }
 
 
@@ -578,7 +717,7 @@
     ------------------------*/
     .service_info_block
     {
-        padding-block: var(--inner_gap);
+        padding-block: 50px;
 
         text-align: center;
     }
@@ -587,6 +726,8 @@
     .service_info_block .cont
     {
         justify-content: center;
+
+        gap: var(--inner_gap_l);
     }
 
 
@@ -653,11 +794,26 @@
     }
 
 
+    .show_real_apartments .mob_image
+    {
+        display: block;
+    }
+
+
     .show_real_apartments .data
     {
         width: 100%;
         padding-block: 70px;
         padding-inline: var(--block_padding);
+    }
+
+
+    .show_real_apartments .block_head .title
+    {
+        padding-block: 2px;
+        padding-left: 89px;
+
+        line-height: calc(100% + 8px);
     }
 
 
@@ -697,10 +853,23 @@
     }
 
 
+    .show_real_apartments .form .checkbox
+    {
+        width: fit-content;
+        margin-inline: auto;
+    }
+
+
 
     /*---------
         How
     ---------*/
+    .how .block_head .title
+    {
+        font-size: 35px;
+    }
+
+
     .how .list
     {
         margin-inline: calc(var(--cont_padding_half) * -1);
@@ -717,9 +886,39 @@
     /*------------------
         Work formats
     -----------------*/
+    .work_formats
+    {
+        padding-block: 60px 15px;
+    }
+
+
+    .work_formats .cont
+    {
+        padding-inline: calc(var(--cont_padding) + var(--inner_gap_xs));
+    }
+
+
+    .work_formats .block_head
+    {
+        position: relative;
+
+        z-index: 3;
+    }
+
+
+    .work_formats .block_head .title
+    {
+        -webkit-text-fill-color: #fff;
+    }
+
+
     .work_formats .item
     {
+        position: relative;
+
         width: 100%;
+
+        z-index: 3;
     }
 
 
@@ -733,6 +932,38 @@
     }
 
 
+    .work_formats .image
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+
+        display: block;
+
+        width: calc(100% - var(--cont_padding));
+        height: 100%;
+        margin-inline: auto;
+
+        z-index: 1;
+        pointer-events: none;
+    }
+
+
+    .work_formats .image:after
+    {
+        position: absolute;
+        inset: 0;
+
+        display: block;
+
+        content: '';
+
+        border-radius: var(--border_radius_l);
+        background: rgba(0, 0, 0, .40);
+    }
+
+
 
     /*---------------
         Get price
@@ -743,6 +974,13 @@
     }
 
 
+
+    .get_price .info
+    {
+        padding-block: 70px var(--inner_gap_l);
+    }
+
+
     .get_price .info .btn
     {
         width: 100%;
@@ -750,6 +988,26 @@
 
         border: 1px solid #dadada;
         border-radius: 25px;
+    }
+
+
+
+    .get_price .data
+    {
+        padding-block: 70px 109px;
+        padding-inline: var(--inner_gap_l);
+    }
+
+
+    .get_price .data .block_head .title
+    {
+        font-size: 32px;
+    }
+
+
+    .get_price .data .block_head .desc br
+    {
+        display: none;
     }
 
 
@@ -773,6 +1031,12 @@
         margin-inline: calc(var(--cont_padding) / -2);
 
         grid-template-columns: 1fr;
+    }
+
+
+    .what_we_do .item
+    {
+        padding: var(--inner_gap_l);
     }
 
 
@@ -871,6 +1135,12 @@
     }
 
 
+    .benefits .data .title
+    {
+        font-size: 34px;
+    }
+
+
 
     /*--------------------------
         Get current projects
@@ -878,6 +1148,12 @@
     .get_current_projects .cont
     {
         padding-inline: var(--cont_padding_half);
+    }
+
+
+    .get_current_projects .block_head .title
+    {
+        font-size: 35px;
     }
 
 
@@ -890,6 +1166,52 @@
     .get_current_projects .item
     {
         min-height: 0;
+    }
+
+
+
+    /*-----------------
+        Action form
+    -----------------*/
+    .action_form .data
+    {
+        padding-block: 112px 108px;
+    }
+
+
+    .action_form .block_head .title.small
+    {
+        font-size: 35px;
+    }
+
+
+
+    /*-----------------------
+        Project economics
+    -----------------------*/
+    .project_economics .info .val
+    {
+        justify-content: center;
+
+        min-height: 60px;
+
+        text-align: center;
+    }
+
+
+    .project_economics .person .name
+    {
+        line-height: calc(100% + 10px);
+    }
+
+
+
+    /*------------------------
+        Service advantages
+    ------------------------*/
+    .service_advantages .bg
+    {
+        display: none;
     }
 
 
@@ -980,6 +1302,8 @@
     {
         width: 150px;
         height: 50px;
+
+        color: #c5c5c5;
 
         aspect-ratio: auto;
     }

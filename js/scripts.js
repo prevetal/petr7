@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	pageLinks.forEach((el, i) => {
 		el.classList.add('page_links_s' + i)
 
-		let options = {
+		const swiper = new Swiper('.page_links_s' + i, {
 			loop: false,
 			speed: 500,
 			watchSlidesProgress: true,
@@ -21,11 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
 			},
-			spaceBetween: 20,
+			spaceBetween: 40,
 			slidesPerView: 'auto',
-		}
+		})
 
-		pageLinksSliders.push(new Swiper('.page_links_s' + i, options))
+		pageLinksSliders.push(swiper)
+
+		$(el).find('.swiper-slide').click(function () {
+			swiper.slideTo($(this).index(), 500)
+		})
 	})
 
 
@@ -70,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	portfolioGalleryTabs.forEach((el, i) => {
 		el.classList.add('portfolio_gallery_s' + i)
 
-		let options = {
+		const swiper = new Swiper('.portfolio_gallery_s' + i, {
 			loop: false,
 			speed: 500,
 			watchSlidesProgress: true,
@@ -82,9 +86,13 @@ document.addEventListener('DOMContentLoaded', function() {
 			},
 			spaceBetween: 40,
 			slidesPerView: 'auto',
-		}
+		})
 
-		portfolioGalleryTabsSliders.push(new Swiper('.portfolio_gallery_s' + i, options))
+		portfolioGalleryTabsSliders.push(swiper)
+
+		$(el).find('.swiper-slide').click(function () {
+			swiper.slideTo($(this).index(), 500)
+		})
 	})
 
 

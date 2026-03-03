@@ -551,6 +551,12 @@ video.cover
 }
 
 
+.tabs .btn span
+{
+    max-width: calc(100% - 11px - var(--inner_gap_s));
+}
+
+
 .tabs .btn .icon
 {
     display: block;
@@ -716,6 +722,43 @@ video.cover
 .accordion_item.active .head .arr svg
 {
     transform: rotate(180deg);
+}
+
+
+
+/*----------------
+    Swiper tip
+----------------*/
+.swiper_tip
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: none;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 50px;
+
+    color: #b8b8b8;
+    border-radius: 15px;
+    background: #f8f8f8;
+
+    aspect-ratio: 1 / 1;
+}
+
+
+.swiper_tip .icon
+{
+    display: block;
+
+    width: 20px;
+    height: 21px;
+
+    aspect-ratio: 1 / 1;
 }
 
 
@@ -1388,7 +1431,7 @@ header .messengers .max_link .icon
 {
     position: relative;
 
-    width: calc((var(--content_width_l) - (var(--visible_slides) - 1) * var(--inner_gap)) / var(--visible_slides));
+    width: calc((var(--content_width_l) - (var(--visible_slides) - 1) * 40px) / var(--visible_slides));
 }
 
 
@@ -1571,6 +1614,7 @@ header .messengers .max_link .icon
 ----------------*/
 .block_head
 {
+    position: relative;
     display: flex;
     flex-direction: column;
 
@@ -4505,7 +4549,7 @@ header .messengers .max_link .icon
 {
     position: relative;
 
-    width: calc((var(--content_width_l) - (var(--visible_slides) - 1) * var(--inner_gap)) / var(--visible_slides));
+    width: calc((var(--content_width_l) - (var(--visible_slides) - 1) * 40px) / var(--visible_slides));
 }
 
 
@@ -5874,6 +5918,27 @@ header .messengers .max_link .icon
 }
 
 
+.show_real_apartments .block_head
+{
+    position: relative;
+}
+
+
+.show_real_apartments .mob_image
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 70px;
+    height: 146px;
+
+    border-radius: 15px;
+}
+
+
 .show_real_apartments .form
 {
     --form_border_color: #e6e6e6;
@@ -6083,6 +6148,12 @@ header .messengers .max_link .icon
 /*------------------
     Work formats
 -----------------*/
+.work_formats
+{
+    position: relative;
+}
+
+
 .work_formats .items
 {
     display: flex;
