@@ -250,6 +250,13 @@
     /*---------
         Why
     ---------*/
+    .why .block_head .desc
+    {
+        width: 440px;
+        padding-right: 40px;
+    }
+
+
     .why .item .desc
     {
         width: 440px;

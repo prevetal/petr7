@@ -2994,9 +2994,14 @@ header .messengers .max_link .icon
 ---------*/
 .why .block_head
 {
-    width: 900px;
-    max-width: 100%;
-    margin-inline: auto;
+    padding-inline: 105px 50px;
+}
+
+
+.why .block_head .desc
+{
+    width: 494px;
+    padding-right: 88px;
 }
 
 
@@ -3874,6 +3879,8 @@ header .messengers .max_link .icon
 
     border-radius: var(--border_radius_l);
     background: var(--bg_white);
+
+    filter: grayscale(1) brightness(1) invert(0);
 }
 
 
@@ -4319,6 +4326,12 @@ header .messengers .max_link .icon
     flex-direction: column;
 
     gap: var(--inner_gap_l);
+}
+
+
+.project_economics .person.mob
+{
+    display: none;
 }
 
 
@@ -4833,6 +4846,7 @@ header .messengers .max_link .icon
     flex-wrap: wrap;
     justify-content: flex-start;
 
+    margin-inline: -12px;
     margin-top: var(--inner_gap_l);
     padding-bottom: 15px;
 
@@ -6004,7 +6018,7 @@ header .messengers .max_link .icon
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    padding-block: 35px;
+    padding-block: var(--block_padding);
 
     font-size: var(--font_size_xl);
     line-height: calc(100% + 15px);
@@ -6030,7 +6044,7 @@ header .messengers .max_link .icon
 
     width: 317px;
     max-width: 100%;
-    padding-block: 35px;
+    padding-block: var(--block_padding);
 
     font-size: var(--font_size_l);
     line-height: calc(100% + 15px);
@@ -6117,7 +6131,7 @@ header .messengers .max_link .icon
 
 .work_formats .item .name
 {
-    font-size: var(--font_size_xl);
+    font-size: var(--font_size_xxl);
 }
 
 

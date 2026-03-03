@@ -176,6 +176,19 @@
     /*---------
         Why
     ---------*/
+    .why .block_head
+    {
+        padding-inline: 88px var(--block_padding_l);
+    }
+
+
+    .why .block_head .desc
+    {
+        width: 480px;
+        padding-right: 80px;
+    }
+
+
     .why .item
     {
         min-height: 100px;
@@ -433,6 +446,16 @@
 
 
 
+    /*------------------------
+        Service info block
+    ------------------------*/
+    .service_info_block
+    {
+        padding-inline: calc(var(--cont_padding) + var(--inner_gap_l) - var(--cont_padding));
+    }
+
+
+
     /*----------------------
         Service benefits
     ----------------------*/
@@ -595,16 +618,9 @@
     }
 
 
-    .how .item .number
-    {
-        padding-block: var(--inner_gap);
-    }
-
-
     .how .item .name
     {
         width: 320px;
-        padding-block: var(--inner_gap);
     }
 
 
@@ -650,6 +666,12 @@
         padding: 60px;
 
         gap: var(--inner_gap_l);
+    }
+
+
+    .get_price .data .block_head
+    {
+        width: 420px;
     }
 
 

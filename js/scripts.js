@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
 			},
-			spaceBetween: 40,
+			spaceBetween: 20,
 			slidesPerView: 'auto',
 		}
 

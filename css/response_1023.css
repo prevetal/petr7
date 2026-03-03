@@ -147,6 +147,25 @@
     /*---------
         Why
     ---------*/
+    .why .block_head
+    {
+        padding-inline: var(--inner_gap_l);
+    }
+
+
+    .why .block_head .desc
+    {
+        width: 100%;
+        padding-right: 0;
+    }
+
+
+    .why .block_head .desc br
+    {
+        display: none;
+    }
+
+
     .why .item
     {
         min-height: 0;
@@ -180,6 +199,12 @@
     {
         width: 100%;
         padding-inline: var(--inner_gap_l);
+    }
+
+
+    .why .item .desc br
+    {
+        display: none;
     }
 
 
@@ -748,6 +773,7 @@
     .how .item .number
     {
         width: 80px;
+        padding-block: var(--inner_gap);
         padding-inline: var(--inner_gap_l);
     }
 
@@ -755,6 +781,7 @@
     .how .item .name
     {
         width: calc(100% - 100px);
+        padding-block: var(--inner_gap);
     }
 
 
