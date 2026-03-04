@@ -478,6 +478,17 @@
 
 
 
+    /*--------------------
+        Portfolio desc
+    --------------------*/
+    .portfolio_desc .images
+    {
+        width: calc(100% + 108px);
+        margin-inline: -54px;
+    }
+
+
+
     /*-----------------------
         Project economics
     -----------------------*/
@@ -977,5 +988,97 @@
     .get_current_projects .item
     {
         min-height: 400px;
+    }
+
+
+
+    /*------------------
+        PopUp - Quiz
+    ------------------*/
+    #quiz_modal
+    {
+        width: 728px;
+
+        border-radius: var(--border_radius_l);
+
+        --modal_data_width: 340px;
+    }
+
+
+    #quiz_modal .step
+    {
+        padding-block: var(--inner_gap_l);
+        padding-inline: var(--inner_gap_l);
+
+        border-radius: var(--border_radius_l);
+    }
+
+
+    #quiz_modal .info
+    {
+        padding-inline: 0;
+    }
+
+
+    #quiz_modal .info .title
+    {
+        font-size: 43px;
+        line-height: calc(100% + 6px);
+    }
+
+
+    #quiz_modal .step6 .info .title
+    {
+        font-size: 48px;
+    }
+
+
+    #quiz_modal .info .desc
+    {
+        width: 280px;
+    }
+
+
+    #quiz_modal .step_desc
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap_l);
+    }
+
+
+    #quiz_modal .amount .btn
+    {
+        width: 80px;
+    }
+
+
+    #quiz_modal .amount .input
+    {
+        width: calc(100% - 180px);
+    }
+
+
+    #quiz_modal .style label div
+    {
+        padding-block: var(--inner_gap_s);
+        padding-inline: var(--inner_gap);
+    }
+
+
+    #quiz_modal .prev_btn
+    {
+        width: 65px;
+        min-width: 65px;
+        height: 65px;
+
+        border-radius: var(--border_radius_s);
+    }
+
+
+    #quiz_modal .next_btn
+    {
+        height: 65px;
+
+        border-radius: var(--border_radius_s);
     }
 }

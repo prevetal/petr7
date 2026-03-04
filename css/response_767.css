@@ -15,6 +15,33 @@
 
 
 
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__container
+    {
+        --f-close-button-width: 45px;
+        --f-close-button-height: 45px;
+        --f-close-border-radius: 12px;
+        --f-close-button-color: var(--light_color);
+        --f-close-button-hover-color: var(--light_color);
+        --f-close-button-svg-width: 19px;
+        --f-close-button-svg-height: 19px;
+        --f-close-button-svg-stroke-width: 1;
+        --f-close-button-bg: var(--primary_color);
+        --f-close-button-hover-bg: var(--primary_color);
+        --f-close-button-active-bg: var(--primary_color);
+    }
+
+
+    .f-button.is-close-button
+    {
+        top: 0;
+        right: 0;
+    }
+
+
+
     /*----------------
         Swiper tip
     ----------------*/
@@ -122,8 +149,43 @@
     }
 
 
-    .block_head.row .desc{
+    .block_head.row .desc
+    {
         width: 100%;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block img
+    {
+        border-radius: var(--border_radius);
+    }
+
+
+    .text_block h2
+    {
+        line-height: normal;
+    }
+
+
+    .text_block * + h2
+    {
+        margin-top: var(--inner_gap_l);
+    }
+
+
+    .text_block .images
+    {
+        margin-block: 40px;
+    }
+
+
+    .text_block hr
+    {
+        margin-block: var(--inner_gap_l);
     }
 
 
@@ -381,18 +443,74 @@
 
 
 
-    /*-----------------------
-        Portfolio gallery
-    -----------------------*/
-    .portfolio_gallery .swiper-slide
+    /*--------------------
+        Portfolio data
+    --------------------*/
+    .portfolio_data .swiper-slide
     {
         width: 200px;
     }
 
 
+
+    /*-----------------------
+        Portfolio gallery
+    -----------------------*/
     .portfolio_gallery .grid_row
     {
         --items_per_line: 1;
+    }
+
+
+
+    /*-----------------------
+        Portfolio process
+    -----------------------*/
+    .portfolio_process
+    {
+        gap: 40px;
+    }
+
+
+    .portfolio_process .section
+    {
+        gap: var(--inner_gap_s);
+    }
+
+
+    .portfolio_process .image
+    {
+        border-radius: var(--border_radius);
+    }
+
+
+    .portfolio_process .caption
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap_l);
+
+        line-height: calc(100% + 10px);
+
+        border-radius: var(--border_radius);
+    }
+
+
+
+    /*--------------------
+        Portfolio desc
+    --------------------*/
+    .portfolio_desc
+    {
+        font-size: var(--font_size);
+        font-weight: 400;
+        line-height: calc(100% + 9px);
+    }
+
+
+    .portfolio_desc .images
+    {
+        width: 100%;
+        margin-inline: 0;
     }
 
 
@@ -417,11 +535,11 @@
     /*--------------------
         Contacts block
     --------------------*/
-    .contacts_block:not(:has(> .cont)),
+    /* .contacts_block:not(:has(> .cont)),
     .contacts_block .cont.row
     {
         padding-inline: var(--cont_padding_half);
-    }
+    } */
 
 
     .contacts_block .info .block_head .desc
@@ -516,7 +634,8 @@
     }
 
 
-    .service_head .data:before{
+    .service_head .data:before
+    {
         display: none;
     }
 
@@ -632,9 +751,10 @@
     /*-----------
         Steps
     -----------*/
-    .steps {
-    padding-inline: var(--cont_padding_half);
-}
+    .steps
+    {
+        padding-inline: var(--cont_padding_half);
+    }
 
 
     .steps .grid_row
@@ -1320,5 +1440,350 @@
     {
         width: 17px;
         height: 17px;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        flex-direction: column;
+
+        width: 340px;
+        padding-top: 65px;
+
+        --modal_info_width: 100%;
+        --modal_data_width: 100%;
+    }
+
+
+    .modal .info
+    {
+        padding: var(--inner_gap_l);
+
+        border-radius: var(--border_radius);
+    }
+
+
+    .modal .data
+    {
+        min-height: 0;
+        padding: var(--inner_gap_l);
+
+        border-radius: var(--border_radius);
+    }
+
+
+    .modal .form .switch .field.with_gap
+    {
+        margin-left: -10px;
+
+        row-gap: 10px;
+    }
+
+
+    .modal .form .switch .with_gap label,
+    .modal .form .switch .with_gap label.width1of3
+    {
+        width: calc(50% - 10px);
+        margin-left: 10px;
+    }
+
+
+    .modal .form .switch .with_gap label.mob_full
+    {
+        width: calc(100% - 10px);
+    }
+
+
+    .modal .form .submit_btn,
+    .modal .form .submit_btn:hover
+    {
+        height: 65px;
+    }
+
+
+    .modal .form .checkbox
+    {
+        width: fit-content;
+        margin-inline: auto;
+    }
+
+
+    .modal .messengers
+    {
+        width: calc(100% + var(--inner_gap_l) * 2);
+        margin-inline: calc(var(--inner_gap_l) * -1);
+        margin-top: var(--block_padding);
+        padding-inline: var(--inner_gap_l);
+        padding-top: var(--inner_gap_l);
+    }
+
+
+
+    .modal.success .data
+    {
+        padding-block: 147px var(--inner_gap_l);
+    }
+
+
+    .modal.success .desc br
+    {
+        display: block;
+    }
+
+
+    .modal.success .messengers
+    {
+        margin-top: 107px;
+        padding-top: var(--inner_gap_l);
+    }
+
+
+
+    /*--------------------------
+        PopUp - Sign up tour
+    --------------------------*/
+    #sign_up_tour_modal
+    {
+        --modal_info_width: 100%;
+    }
+
+
+    #sign_up_tour_modal .info
+    {
+        padding: var(--inner_gap_l);
+    }
+
+
+    #sign_up_tour_modal .info .title
+    {
+        font-size: 39px;
+        line-height: calc(100% + 5px);
+    }
+
+
+
+    /*-----------------------------
+        PopUp - Get supervision
+    -----------------------------*/
+    #get_supervision_modal .info
+    {
+        min-height: 302px;
+    }
+
+
+    #get_supervision_modal .info .title
+    {
+        font-size: 43px;
+        line-height: calc(100% + 1px);
+    }
+
+
+    #get_supervision_modal .form
+    {
+        margin-top: var(--inner_gap);
+    }
+
+
+    #get_supervision_modal .form .switch
+    {
+        margin-bottom: var(--inner_gap_l);
+    }
+
+
+
+    /*---------------------------
+        PopUp - Get checklist
+    ---------------------------*/
+    #get_checklist_modal .info
+    {
+        min-height: 240px;
+    }
+
+
+    #get_checklist_modal .image:after
+    {
+        background: rgba(0, 0, 0, .4);
+    }
+
+
+    #get_checklist_modal .form
+    {
+        margin-top: var(--inner_gap);
+    }
+
+
+    #get_checklist_modal .form .switch
+    {
+        margin-bottom: var(--inner_gap_l);
+    }
+
+
+
+    /*-----------------------------
+        PopUp - Get appointment
+    -----------------------------*/
+    #get_appointment_modal .info .title
+    {
+        font-size: 39px;
+        line-height: calc(100% + 5px);
+    }
+
+
+
+    /*---------------------------
+        PopUp - Get checklist
+    ---------------------------*/
+    #calc_price_modal .info .title
+    {
+        font-size: 43px;
+        line-height: calc(100% + 1px);
+    }
+
+
+
+    /*-------------------------------
+        PopUp - Get appointment 2
+    -------------------------------*/
+    #get_appointment2_modal
+    {
+        --modal_info_width: 100%;
+    }
+
+
+    #get_appointment2_modal .info
+    {
+        padding: var(--inner_gap_l);
+    }
+
+
+    #get_appointment2_modal .info .title
+    {
+        font-size: 39px;
+        line-height: calc(100% + 5px);
+    }
+
+
+    #get_appointment2_modal .image:after
+    {
+        background: rgba(0, 0, 0, .4);
+    }
+
+
+
+    /*------------------
+        PopUp - Quiz
+    ------------------*/
+    #quiz_modal
+    {
+        width: 340px;
+
+        border-radius: var(--border_radius);
+
+        --modal_info_width: 100%;
+        --modal_data_width: 100%;
+    }
+
+
+    #quiz_modal .f-button.is-close-button
+    {
+        display: flex;
+    }
+
+
+    #quiz_modal .step
+    {
+        padding-block: var(--inner_gap) var(--inner_gap_s);
+        padding-inline: var(--inner_gap_s);
+
+        border-radius: var(--border_radius);
+    }
+
+
+    #quiz_modal .info
+    {
+        padding-block: var(--inner_gap_s) var(--inner_gap_l);
+        padding-inline: var(--inner_gap);
+    }
+
+
+    #quiz_modal .info .title,
+    #quiz_modal .step6 .info .title
+    {
+        font-size: 43px;
+        line-height: calc(100% + 1px);
+    }
+
+
+    #quiz_modal .info .desc
+    {
+        width: 100%;
+    }
+
+
+    #quiz_modal .step_desc
+    {
+        margin-inline: var(--inner_gap_s);
+        margin-bottom: var(--inner_gap);
+
+        text-align: center;
+    }
+
+
+    #quiz_modal .amount .btn
+    {
+        order: 2;
+
+        width: calc(50% - var(--inner_gap_xs));
+        height: 55px;
+        margin-top: var(--inner_gap_s);
+    }
+
+
+    #quiz_modal .amount .input
+    {
+        width: 100%;
+        height: 55px;
+    }
+
+
+    #quiz_modal .finish .checkbox
+    {
+        white-space: nowrap;
+    }
+
+
+    #quiz_modal .style > *
+    {
+        width: calc(100% - var(--inner_gap_s));
+    }
+
+
+    #quiz_modal .style label div
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap_l);
+    }
+
+
+    #quiz_modal .data
+    {
+        min-height: 0;
+    }
+
+
+    #quiz_modal .btns
+    {
+        margin-top: var(--inner_gap_l);
+    }
+
+
+    #quiz_modal .prev_btn
+    {
+        width: 50px;
+        min-width: 50px;
     }
 }

@@ -385,17 +385,17 @@
 
 
 
-    /*-----------------------
-        Portfolio gallery
-    -----------------------*/
-    .portfolio_gallery .swiper-slide
+    /*--------------------
+        Portfolio data
+    --------------------*/
+    .portfolio_data .swiper-slide
     {
         width: 260px;
     }
 
 
-    .portfolio_gallery .swiper-button-prev:after,
-    .portfolio_gallery .swiper-button-next:after
+    .portfolio_data .swiper-button-prev:after,
+    .portfolio_data .swiper-button-next:after
     {
         width: 20px;
     }

@@ -67,14 +67,14 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 
 
-	// Portfolio gallery tabs slider
-	const portfolioGalleryTabsSliders = [],
-		portfolioGalleryTabs = document.querySelectorAll('.portfolio_gallery .swiper')
+	// Portfolio data tabs slider
+	const portfolioDataTabsSliders = [],
+		portfolioDataTabs = document.querySelectorAll('.portfolio_data .swiper')
 
-	portfolioGalleryTabs.forEach((el, i) => {
-		el.classList.add('portfolio_gallery_s' + i)
+	portfolioDataTabs.forEach((el, i) => {
+		el.classList.add('portfolio_data_s' + i)
 
-		const swiper = new Swiper('.portfolio_gallery_s' + i, {
+		const swiper = new Swiper('.portfolio_data_s' + i, {
 			loop: false,
 			speed: 500,
 			watchSlidesProgress: true,
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			slidesPerView: 'auto',
 		})
 
-		portfolioGalleryTabsSliders.push(swiper)
+		portfolioDataTabsSliders.push(swiper)
 
 		$(el).find('.swiper-slide').click(function () {
 			swiper.slideTo($(this).index(), 500)
@@ -116,6 +116,29 @@ document.addEventListener('DOMContentLoaded', function() {
 			</div>`,
 		}
 	}
+
+
+	// Modals
+	$('.modal_btn').click(function(e) {
+		e.preventDefault()
+
+		Fancybox.close()
+
+		Fancybox.show(
+			[{
+				src: `#${e.target.getAttribute('data-modal')}`,
+				type: 'inline'
+			}],
+			fancyOptions
+		)
+	})
+
+
+	$('.modal .close_btn').click(function(e) {
+		e.preventDefault()
+
+		Fancybox.close()
+	})
 
 
 	// Zoom images
@@ -227,6 +250,72 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Mob. header
 	mobHeader = document.querySelector('.mob_header')
+
+
+	// Change quantity
+	$('body').on('click', '.amount .minus', function (e) {
+		e.preventDefault()
+
+		const $parent = $(this).closest('.amount'),
+			$input = $parent.find('.input'),
+			inputVal = parseFloat($input.val()),
+			minimum = parseFloat($input.data('minimum')),
+			step = parseFloat($input.data('step')),
+			unit = $input.data('unit')
+
+		if (inputVal > minimum) $input.val(inputVal - step + unit)
+	})
+
+	$('body').on('click', '.amount .plus', function (e) {
+		e.preventDefault()
+
+		const $parent = $(this).closest('.amount'),
+			$input = $parent.find('.input'),
+			inputVal = parseFloat($input.val()),
+			maximum = parseFloat($input.data('maximum')),
+			step = parseFloat($input.data('step')),
+			unit = $input.data('unit')
+
+		if (inputVal < maximum) $input.val(inputVal + step + unit)
+	})
+
+	$('.amount .input').keydown(function () {
+		const _self = $(this),
+			maximum = parseInt(_self.data('maximum'))
+
+		setTimeout(() => {
+			if (_self.val() == '' || _self.val() == 0) _self.val(parseInt(_self.data('minimum')))
+			if (_self.val() > maximum) _self.val(maximum)
+		})
+	})
+
+
+	// Quiz
+	var currentStep = 1
+
+	$('#quiz_modal .next_btn').click(function(e) {
+		e.preventDefault()
+
+		const step = $(this).closest('.step')
+
+		step.hide()
+
+		currentStep++
+
+		$('#quiz_modal .step' + currentStep).fadeIn(300)
+	})
+
+	$('#quiz_modal .prev_btn').click(function(e) {
+		e.preventDefault()
+
+		const step = $(this).closest('.step')
+
+		step.hide()
+
+		currentStep = currentStep - 1
+
+		$('#quiz_modal .step' + currentStep).fadeIn(300)
+	})
 })
 
 
