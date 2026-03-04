@@ -394,41 +394,6 @@
 
 
 
-    /*----------
-        Team
-    ----------*/
-    .team .block_head
-    {
-        width: 380px;
-
-        gap: var(--inner_gap);
-    }
-
-
-    .team .image
-    {
-        width: calc(100% - 380px - var(--inner_gap));
-        min-height: 600px;
-    }
-
-
-
-    /*--------------------
-        Infrastructure
-    --------------------*/
-    .infrastructure .image
-    {
-        height: 340px;
-    }
-
-
-    .infrastructure .block_head .title
-    {
-        width: 400px;
-    }
-
-
-
     /*------------------
         Service head
     ------------------*/
@@ -734,6 +699,86 @@
     {
         min-height: 500px;
         padding: var(--block_padding);
+    }
+
+
+
+    /*----------------
+        About path
+    ----------------*/
+    .about_path .data
+    {
+        padding-right: var(--block_padding);
+    }
+
+
+    .about_path .image
+    {
+        width: calc(50% - var(--inner_gap_xs));
+        margin-right: 0;
+    }
+
+
+
+    /*-------------------
+        About control
+    -------------------*/
+    .about_control .image1
+    {
+        width: 224px;
+    }
+
+    .about_control .image2
+    {
+        width: 320px;
+    }
+
+    .about_control .image3
+    {
+        width: 264px;
+    }
+
+
+    .about_control .data
+    {
+        width: calc(100% - 838px);
+        min-height: 600px;
+        padding-inline: var(--inner_gap_l);
+    }
+
+
+
+    /*-------------------
+        About mistake
+    -------------------*/
+    .about_mistake .data
+    {
+        width: 440px;
+        padding-top: var(--inner_gap);
+    }
+
+
+    .about_mistake .image
+    {
+        width: calc(100% - 500px);
+        margin-right: 0;
+    }
+
+
+
+    /*--------------------
+        Flipping block
+    --------------------*/
+    .flipping_block .data
+    {
+        padding-block: 60px;
+        padding-inline: var(--inner_gap_l);
+    }
+
+
+    .flipping_block .block_head
+    {
+        width: 360px;
     }
 
 

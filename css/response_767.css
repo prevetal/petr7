@@ -535,11 +535,11 @@
     /*--------------------
         Contacts block
     --------------------*/
-    /* .contacts_block:not(:has(> .cont)),
+    .contacts_block:not(:has(> .cont)),
     .contacts_block .cont.row
     {
         padding-inline: var(--cont_padding_half);
-    } */
+    }
 
 
     .contacts_block .info .block_head .desc
@@ -585,42 +585,30 @@
     }
 
 
-
-    /*----------
-        Team
-    ----------*/
-    .team .cont
+    .about_head .data
     {
-        padding-inline: var(--cont_padding_half);
+        padding-block: var(--block_padding_l) var(--inner_gap);
     }
 
 
-
-    /*--------------------
-        Infrastructure
-    --------------------*/
-    .infrastructure .cont
-    {
-        padding-inline: var(--cont_padding_half);
-    }
-
-
-    .infrastructure .block_head
+    .about_head .cont
     {
         padding-inline: var(--inner_gap);
     }
 
 
-    .infrastructure .block_head .title,
-    .infrastructure .block_head .desc
+    .about_head .cities
     {
-        width: 100%;
+        justify-content: center;
+
+        gap: var(--inner_gap_s);
     }
 
 
-    .infrastructure .block_head .desc br
+    .about_head .cities .sep
     {
-        display: none;
+        width: 100%;
+        height: 1px;
     }
 
 
@@ -1332,6 +1320,34 @@
     .service_advantages .bg
     {
         display: none;
+    }
+
+
+
+    /*-------------------
+        About control
+    -------------------*/
+    .about_control .data
+    {
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .about_control .block_head .title
+    {
+        font-size: 40px;
+        line-height: calc(100% + 6px);
+    }
+
+
+
+    /*--------------------
+        Flipping block
+    --------------------*/
+    .flipping_block .text_block .columns > *,
+    .flipping_block .text_block .columns > * + *
+    {
+        width: 100%;
     }
 
 

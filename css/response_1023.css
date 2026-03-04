@@ -546,70 +546,6 @@
 
 
 
-    /*----------------
-        About head
-    ----------------*/
-    .about_head .data
-    {
-        height: 660px;
-    }
-
-
-
-    /*----------
-        Team
-    ----------*/
-    .team .block_head
-    {
-        align-content: center;
-        align-items: center;
-
-        width: 100%;
-        padding-block: 60px;
-        padding-inline: var(--inner_gap_l);
-
-        text-align: center;
-    }
-
-
-    .team .image
-    {
-        width: 100%;
-        min-height: 0;
-    }
-
-
-
-    /*--------------------
-        Infrastructure
-    --------------------*/
-    .infrastructure .image
-    {
-        height: 220px;
-    }
-
-
-    .infrastructure .block_head
-    {
-        justify-content: center;
-
-        width: 100%;
-        padding-block: 60px;
-        padding-inline: var(--inner_gap_l);
-
-        text-align: center;
-
-        gap: var(--inner_gap);
-    }
-
-
-    .infrastructure .block_head .desc
-    {
-        width: 428px;
-    }
-
-
-
     /*------------------
         Service head
     ------------------*/
@@ -988,6 +924,87 @@
     .get_current_projects .item
     {
         min-height: 400px;
+    }
+
+
+
+    /*----------------
+        About path
+    ----------------*/
+    .about_path .data
+    {
+        width: 100%;
+        padding: 0;
+    }
+
+
+    .about_path .author
+    {
+        display: none;
+    }
+
+
+    .about_path .image
+    {
+        width: 100%;
+        margin-top: var(--inner_gap_l);
+    }
+
+
+
+    /*-------------------
+        About control
+    -------------------*/
+    .about_control .data
+    {
+        padding-block: var(--block_padding_l);
+        padding-inline: var(--inner_gap_l);
+    }
+
+
+
+    /*-------------------
+        About mistake
+    -------------------*/
+    .about_mistake .data
+    {
+        width: 100%;
+    }
+
+
+    .about_mistake .text_block
+    {
+        width: 100%;
+    }
+
+
+    .about_mistake .image
+    {
+        width: 100%;
+        margin-top: var(--inner_gap_l);
+    }
+
+
+
+    /*--------------------
+        Flipping block
+    --------------------*/
+    .flipping_block .data
+    {
+        padding-block: var(--block_padding_l);
+        padding-inline: var(--inner_gap_s);
+    }
+
+
+    .flipping_block .text_block .columns > *
+    {
+        width: 304px;
+    }
+
+
+    .flipping_block .text_block .columns > * + *
+    {
+        width: calc(100% - 304px - var(--inner_gap_l));
     }
 
 

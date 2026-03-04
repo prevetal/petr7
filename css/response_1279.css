@@ -400,46 +400,6 @@
 
 
 
-    /*----------
-        Team
-    ----------*/
-    .team .block_head
-    {
-        width: 340px;
-        padding: var(--block_padding_l);
-    }
-
-
-    .team .image
-    {
-        width: calc(100% - 340px - var(--inner_gap));
-        min-height: 472px;
-    }
-
-
-
-    /*--------------------
-        Infrastructure
-    --------------------*/
-    .infrastructure .image
-    {
-        height: 268px;
-    }
-
-
-    .infrastructure .block_head
-    {
-        padding: var(--block_padding_l);
-    }
-
-
-    .infrastructure .block_head .title
-    {
-        width: 360px;
-    }
-
-
-
     /*------------------
         Service head
     ------------------*/
@@ -727,5 +687,88 @@
     .get_current_projects .item
     {
         min-height: 440px;
+    }
+
+
+
+    /*----------------
+        About path
+    ----------------*/
+    .about_path .author
+    {
+        font-size: var(--font_size_l);
+    }
+
+
+    .about_path .image
+    {
+        border-radius: var(--border_radius);
+    }
+
+
+
+    /*-------------------
+        About control
+    -------------------*/
+    .about_control .image
+    {
+        display: none;
+    }
+
+
+    .about_control .data
+    {
+        width: 100%;
+        min-height: 0;
+        padding-block: 60px;
+        padding-inline: var(--block_padding_l);
+    }
+
+
+
+    /*-------------------
+        About mistake
+    -------------------*/
+    .about_mistake .data
+    {
+        width: 400px;
+        padding-top: 0;
+    }
+
+
+    .about_mistake .image
+    {
+        width: calc(100% - 440px);
+
+        border-radius: var(--border_radius);
+    }
+
+
+
+    /*--------------------
+        Flipping block
+    --------------------*/
+    .flipping_block .block_head
+    {
+        width: 100%;
+        margin-bottom: var(--block_head_offset);
+    }
+
+
+    .flipping_block .text_block
+    {
+        width: 100%;
+    }
+
+
+    .flipping_block .text_block .columns > *
+    {
+        width: 360px;
+    }
+
+
+    .flipping_block .text_block .columns > * + *
+    {
+        width: calc(100% - 360px - var(--inner_gap_l));
     }
 }
