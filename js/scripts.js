@@ -154,16 +154,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	// Mob. menu
-	$('.mob_header .mob_menu_btn').click((e) => {
+	$('.mob_header .mob_menu_btn, .mob_menu .close_btn').click((e) => {
 		e.preventDefault()
 
 		$('.mob_header .mob_menu_btn').toggleClass('active')
-		$('body').toggleClass('lock menu_open')
-		$('header').toggleClass('show')
-
-		$('.mob_header .mob_menu_btn').hasClass('active')
-			? $('.overlay').fadeIn(300)
-			: $('.overlay').fadeOut(200)
+		$('body').toggleClass('lock')
+		$('.mob_menu').toggleClass('show')
 	})
 
 
