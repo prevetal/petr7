@@ -316,6 +316,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		$('#quiz_modal .step' + currentStep).fadeIn(300)
 	})
+
+
+	if (is_touch_device()) {
+		const subMenus = document.querySelectorAll('header .menu .sub')
+
+		// Submenu on the touch screen
+		$('header .menu .item > a.sub_link').click(function (e) {
+			const dropdown = $(this).next()
+
+			if (dropdown.css('visibility') === 'hidden') {
+				e.preventDefault()
+
+				subMenus.forEach(el => el.classList.remove('show'))
+				dropdown.addClass('show')
+
+				BODY.style = 'cursor: pointer;'
+			}
+		})
+
+		// Close the submenu when clicking outside it
+		document.addEventListener('click', e => {
+			if ($(e.target).closest('.menu').length === 0) {
+				subMenus.forEach(el => el.classList.remove('show'))
+
+				BODY.style = 'cursor: default;'
+			}
+		})
+	}
 })
 
 

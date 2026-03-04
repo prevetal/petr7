@@ -381,9 +381,17 @@ video.cover
 
     width: 10px;
 
+    transition: transform .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
+}
+
+
+.all_link a:hover .icon
+{
+    transform: rotate(45deg);
 }
 
 
@@ -436,7 +444,12 @@ video.cover
 }
 
 
-.pagination a:hover,
+.pagination a:hover
+{
+    color: #3d3d3d;
+}
+
+
 .pagination a.active
 {
     color: #565656;
@@ -448,6 +461,8 @@ video.cover
 .pagination a.next
 {
     width: 120px;
+
+    transition: .3s linear;
 
     color: var(--light_color);
     background: var(--primary_color);
@@ -478,6 +493,13 @@ video.cover
 .pagination a.next .icon
 {
     transform: scale(-1, 1);
+}
+
+
+.pagination a.prev:hover,
+.pagination a.next:hover
+{
+    transform: scale(1.2);
 }
 
 
@@ -692,6 +714,8 @@ video.cover
     min-width: 30px;
     margin-left: auto;
 
+    transition: .3s linear;
+
     color: #bdbdbd;
     border-radius: var(--border_radius_xs);
     background: var(--bg_white);
@@ -725,6 +749,15 @@ video.cover
     line-height: calc(100% + 8px);
 
     opacity: .5;
+}
+
+
+.accordion_item .head:hover .arr
+{
+    transform: scale(1.2);
+
+    color: var(--light_color);
+    background: var(--primary_color);
 }
 
 
@@ -892,6 +925,8 @@ header .menu .item > a .arr
 
     width: 6px;
     height: 4px;
+
+    transition: transform .2s linear;
 }
 
 
@@ -899,6 +934,12 @@ header .menu .item:hover > a,
 header .menu .item > a.active
 {
     background: rgba(255, 255, 255, .5);
+}
+
+
+header .menu .item:hover > a  .arr
+{
+    transform: rotate(180deg);
 }
 
 
@@ -911,6 +952,7 @@ header .menu .sub
     visibility: hidden;
 
     min-width: 100%;
+    margin-top: var(--inner_gap_xs);
     padding-block: var(--inner_gap);
 
     z-index: 9;
@@ -918,8 +960,23 @@ header .menu .sub
     pointer-events: none;
 
     opacity: 0;
-    background: var(--bg);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    border-radius: var(--border_radius_s);
+    background: var(--bg_white);
+}
+
+
+header .menu .sub:before
+{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: var(--inner_gap_xs);
+
+    content: '';
 }
 
 
@@ -936,24 +993,43 @@ header .menu .sub
 }
 
 
+header .menu .sub.show
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
 header .menu .sub a
 {
     display: block;
 
-    padding-block: var(--inner_gap);
-    padding-inline: var(--inner_gap);
+    padding-block: 12px;
+    padding-inline: 18px;
 
-    transition: color .2s linear;
+    font-family: var(--font_family3);
+    font-size: var(--font_size_s);
+    line-height: calc(100% + 4px);
+
+    transition: .2s linear;
+    white-space: nowrap;
     text-decoration: none;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
 
-    color: currentColor;
+    opacity: .5;
+    color: var(--dark_color2);
 }
 
 
 header .menu .sub a:hover,
 header .menu .sub a.active
 {
-    color: var(--primary_color);
+    opacity: 1;
+    background: #f9f9f9;
 }
 
 
@@ -979,11 +1055,19 @@ header .phone
 
 header .phone a
 {
+    transition: .2s linear;
     white-space: nowrap;
     text-decoration: none;
 
     opacity: .7;
     color: currentColor;
+}
+
+
+header .phone a:hover
+{
+    opacity: 1;
+    color: var(--primary_color);
 }
 
 
@@ -1012,6 +1096,7 @@ header .messengers a
 
     width: 30px;
 
+    transition: .2s linear;
     text-decoration: none;
 
     color: var(--grey_color);
@@ -1039,6 +1124,13 @@ header .messengers .max_link .icon
 {
     width: 12px;
     height: 12px;
+}
+
+
+header .messengers a:hover
+{
+    color: var(--light_color);
+    background: var(--primary_color);
 }
 
 
@@ -1573,7 +1665,7 @@ header .messengers .max_link .icon
     font-weight: 500;
     line-height: calc(100% + 10px);
 
-    transition: opacity .2s linear;
+    transition: .2s linear;
     text-decoration: none;
     letter-spacing: 1.04px;
 
@@ -1604,7 +1696,6 @@ header .messengers .max_link .icon
 }
 
 
-.page_links a:hover .icon,
 .page_links a.active .icon
 {
     color: var(--primary_color);
@@ -1715,7 +1806,7 @@ header .messengers .max_link .icon
 .form
 {
     --form_border_color: #dadada;
-    --form_border_color_focus: var(--dark_color);
+    --form_border_color_focus: #dadada;
     --form_border_radius: var(--border_radius);
     --form_error_color: red;
     --form_bg_color: none;
@@ -1839,47 +1930,39 @@ header .messengers .max_link .icon
     top: .5lh;
     left: 0;
 
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-
     width: 16px;
-    height: 16px;
 
+    transition: .2s linear;
     transform: translateY(-50%);
 
     color: #585858;
     border: 1px solid var(--form_border_color);
     border-radius: 7px;
-}
 
-
-.form .checkbox .check .icon
-{
-    display: block;
-
-    width: 8px;
-    height: 6px;
-
-    transition: opacity .2s linear;
-
-    opacity: 0;
+    aspect-ratio: 1 / 1;
 }
 
 
 .form .checkbox a
 {
+    transition: color .2s linear;
+
     color: currentColor;
 
     text-decoration-thickness: 1px;
 }
 
 
-.form .checkbox input:checked ~ .check .icon
+.form .checkbox a:hover
 {
-    opacity: 1;
+    color: var(--dark_color);
+}
+
+
+.form .checkbox input:checked ~ .check
+{
+    border-color: var(--primary_color);
+    background: var(--primary_color);
 }
 
 
@@ -1910,7 +1993,7 @@ header .messengers .max_link .icon
 
     width: 11px;
 
-    transition: color .2s linear;
+    transition: .2s linear;
 
     color: var(--primary_color);
 
@@ -1928,6 +2011,8 @@ header .messengers .max_link .icon
 
 .form .submit_btn:hover .icon
 {
+    transform: rotate(45deg);
+
     color: var(--light_color);
 }
 
@@ -2295,9 +2380,17 @@ header .messengers .max_link .icon
 
     width: 11px;
 
+    transition: transform .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
+}
+
+
+.first_section .links .link:hover .icon
+{
+    transform: rotate(45deg);
 }
 
 
@@ -2560,6 +2653,7 @@ header .messengers .max_link .icon
     flex-wrap: wrap;
     justify-content: center;
 
+    transition: opacity .2s linear;
     text-decoration: none;
 
     opacity: .5;
@@ -2575,9 +2669,23 @@ header .messengers .max_link .icon
 
     width: 11px;
 
+    transition: transform .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
+}
+
+
+.directions .section .links .link:hover
+{
+    opacity: 1;
+}
+
+
+.directions .section .links .link:hover .icon
+{
+    transform: rotate(45deg);
 }
 
 
@@ -2756,9 +2864,17 @@ header .messengers .max_link .icon
 
     width: 10px;
 
+    transition: transform .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
+}
+
+
+.portfolio .swiper .item .link a:hover .icon
+{
+    transform: rotate(45deg);
 }
 
 
@@ -3010,9 +3126,17 @@ header .messengers .max_link .icon
 
     width: 10px;
 
+    transition: transform .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
+}
+
+
+.portfolio .grid_row .item .link a:hover .icon
+{
+    transform: rotate(45deg);
 }
 
 
@@ -3287,9 +3411,17 @@ header .messengers .max_link .icon
 
     width: 10px;
 
+    transition: transform .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
+}
+
+
+.contacts_block .info .order_btn:hover .icon
+{
+    transform: rotate(45deg);
 }
 
 
@@ -3500,9 +3632,17 @@ header .messengers .max_link .icon
 
     width: 10px;
 
+    transition: transform .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
+}
+
+
+.contacts_block .data .map_link a:hover .icon
+{
+    transform: rotate(45deg);
 }
 
 
@@ -3615,12 +3755,23 @@ header .messengers .max_link .icon
 .contacts_block .data .feedback .form .checkbox .check
 {
     width: 13px;
-    height: 13px;
 
     color: var(--light_color);
     border: none;
     border-radius: 5px;
     background: rgba(255, 255, 255, .2);
+}
+
+
+.contacts_block .data .feedback .form .checkbox a:hover
+{
+    color: var(--primary_color);
+}
+
+
+.contacts_block .data .feedback .form .checkbox input:checked + .check
+{
+    background: var(--primary_color);
 }
 
 
@@ -3657,10 +3808,17 @@ header .messengers .max_link .icon
 
 .contacts_block .data .contacts .phone a
 {
+    transition: color .2s linear;
     white-space: nowrap;
     text-decoration: none;
 
     color: currentColor;
+}
+
+
+.contacts_block .data .contacts .phone a:hover
+{
+    color: var(--primary_color);
 }
 
 
@@ -3687,6 +3845,7 @@ header .messengers .max_link .icon
 
     width: 30px;
 
+    transition: .3s linear;
     text-decoration: none;
 
     color: #c3b9ae;
@@ -3714,6 +3873,15 @@ header .messengers .max_link .icon
 {
     width: 12px;
     height: 12px;
+}
+
+
+.contacts_block .data .contacts .messengers a:hover
+{
+    transform: scale(1.2);
+
+    color: var(--light_color);
+    background: var(--primary_color);
 }
 
 
@@ -4079,6 +4247,7 @@ header .messengers .max_link .icon
 
     width: 60px;
 
+    transition: .2s linear;
     text-decoration: none;
 
     color: #ddd;
@@ -4106,6 +4275,13 @@ header .messengers .max_link .icon
 {
     width: 18px;
     height: 18px;
+}
+
+
+.contacts_info .item .messengers a:hover
+{
+    color: var(--light_color);
+    background: var(--primary_color);
 }
 
 
@@ -4152,9 +4328,17 @@ header .messengers .max_link .icon
 
 .contacts_info .info a
 {
+    transition: .2s linear;
+
     color: currentColor;
 
     text-decoration-thickness: 1px;
+}
+
+
+.contacts_info .info a:hover
+{
+    color: var(--primary_color);
 }
 
 
@@ -5149,6 +5333,8 @@ header .messengers .max_link .icon
 
     width: 11px;
 
+    transition: transform .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
@@ -5158,6 +5344,12 @@ header .messengers .max_link .icon
 .service_head .links .link span + span
 {
     display: none;
+}
+
+
+.service_head .links .link:hover .icon
+{
+    transform: rotate(45deg);
 }
 
 
@@ -5562,6 +5754,7 @@ header .messengers .max_link .icon
     font-size: var(--font_size_l);
     line-height: calc(100% + 6px);
 
+    transition: .2s linear;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -5579,9 +5772,27 @@ header .messengers .max_link .icon
 
     width: 11px;
 
+    transition: .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
+}
+
+
+.service_after .head .link a:hover
+{
+    color: var(--light_color);
+    border-color: var(--primary_color);
+    background: var(--primary_color);
+}
+
+
+.service_after .head .link a:hover .icon
+{
+    transform: rotate(45deg);
+
+    color: var(--light_color);
 }
 
 
@@ -5701,9 +5912,17 @@ header .messengers .max_link .icon
 
     width: 10px;
 
+    transition: transform .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
+}
+
+
+.service_after .data .link a:hover .icon
+{
+    transform: rotate(45deg);
 }
 
 
@@ -6140,7 +6359,7 @@ header .messengers .max_link .icon
     font-weight: 300;
     line-height: calc(100% + 6px);
 
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
 
     color: var(--dark_color);
     border: none;
@@ -6414,9 +6633,17 @@ header .messengers .max_link .icon
 
     width: 10px;
 
+    transition: transform .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
+}
+
+
+.work_formats .item .link a:hover .icon
+{
+    transform: rotate(45deg);
 }
 
 
@@ -6494,9 +6721,17 @@ header .messengers .max_link .icon
 
     width: 10px;
 
+    transition: transform .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
+}
+
+
+.get_price .info .btn:hover .icon
+{
+    transform: rotate(45deg);
 }
 
 
@@ -6586,9 +6821,17 @@ header .messengers .max_link .icon
 
     width: 10px;
 
+    transition: transform .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
+}
+
+
+.get_price .data .btn:hover .icon
+{
+    transform: rotate(45deg);
 }
 
 
@@ -7201,9 +7444,18 @@ header .messengers .max_link .icon
 
     width: 10px;
 
+    transition: transform .2s linear;
+
     color: var(--primary_color);
 
     aspect-ratio: 1 / 1;
+}
+
+
+.get_current_projects .item .link a:hover .icon,
+.get_current_projects .item .btn:hover .icon
+{
+    transform: rotate(45deg);
 }
 
 
@@ -7427,11 +7679,19 @@ footer .phone
 
 footer .phone a
 {
+    transition: .2s linear;
     white-space: nowrap;
     text-decoration: none;
 
     opacity: .7;
     color: currentColor;
+}
+
+
+footer .phone a:hover
+{
+    opacity: 1;
+    color: var(--primary_color);
 }
 
 
@@ -7460,6 +7720,7 @@ footer .messengers a
 
     width: 30px;
 
+    transition: .2s linear;
     text-decoration: none;
 
     color: #c3b9ae;
@@ -7487,6 +7748,15 @@ footer .messengers .max_link .icon
 {
     width: 12px;
     height: 12px;
+}
+
+
+footer .messengers a:hover
+{
+    transform: scale(1.2);
+
+    color: var(--light_color);
+    background: var(--primary_color);
 }
 
 

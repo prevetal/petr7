@@ -1,7 +1,7 @@
 .swiper-button-next,
 .swiper-button-prev
 {
-    transition: .2s linear;
+    transition: transform .3s linear;
 
     border-radius: 15px;
     background: var(--primary_color);
@@ -32,6 +32,13 @@
 .swiper-button-next .icon
 {
     transform: rotate(180deg);
+}
+
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover
+{
+    transform: scale(1.2);
 }
 
 
